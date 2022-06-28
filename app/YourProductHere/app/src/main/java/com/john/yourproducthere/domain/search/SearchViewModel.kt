@@ -2,7 +2,7 @@ package com.john.yourproducthere.domain.search
 
 import androidx.lifecycle.ViewModel
 import com.john.yourproducthere.application.products.ProductsStatus
-import com.john.yourproducthere.domain.ProductsResolverResult
+import com.john.yourproducthere.domain.services.reponse.ProductsResolverResult
 import com.john.yourproducthere.domain.models.ProductInquiry
 import com.john.yourproducthere.domain.services.ProductService
 import dagger.hilt.android.lifecycle.HiltViewModel

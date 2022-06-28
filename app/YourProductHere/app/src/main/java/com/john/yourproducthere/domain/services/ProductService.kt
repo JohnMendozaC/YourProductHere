@@ -1,7 +1,7 @@
 package com.john.yourproducthere.domain.services
 
-import com.john.yourproducthere.domain.ProductsResolverResult
-import com.john.yourproducthere.domain.Status
+import com.john.yourproducthere.domain.services.reponse.ProductsResolverResult
+import com.john.yourproducthere.domain.services.reponse.Status
 import com.john.yourproducthere.domain.models.ProductInquiry
 import com.john.yourproducthere.infrastructure.network.daos.ProductDaoRetroFit
 import com.john.yourproducthere.infrastructure.network.toProductInquiry
