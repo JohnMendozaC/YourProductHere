@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="size_logo_search">250dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+
+    <dimen name="card_side_margin">12dp</dimen>
+    <dimen name="card_bottom_margin">5dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="card_corner_radius">12dp</dimen>
+
+    <integer name="max_lenght_search">40</integer>
+
+</resources>

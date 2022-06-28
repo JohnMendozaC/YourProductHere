@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Your product here APP</string>
+
+    //validate
+    <string name="alpha_numeric" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 </string>
+
+    <string name="no_product_to_show">No hay producto que mostrar</string>
+    <string name="link_of_sale"><![CDATA[<b>Link de compra:</b>]]> %1$s</string>
+    <string name="price"><![CDATA[<b>Precio de venta:</b>]]> %1$s</string>
+    <string name="search_your_product">¿Que producto estas buscando?</string>
+    <string name="search">Buscar</string>
+    <string name="no_results_found">No se encontraron resultados para su busqueda.</string>
+    <string name="no_network_active">No tiene conexión a internet.</string>
+
+    <string name="list_of_products">Listado de productos</string>
+    <string name="product_details">Detalles del producto</string>
+
+</resources>
