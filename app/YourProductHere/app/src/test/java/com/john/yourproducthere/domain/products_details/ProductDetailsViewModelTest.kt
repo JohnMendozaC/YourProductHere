@@ -17,7 +17,7 @@ class ProductDetailsViewModelTest {
     private lateinit var productDetailsViewModel: ProductDetailsViewModel
     private val emptyProduct = null
 
-    @MockK
+    @MockK(relaxed = true)
     private lateinit var productsDetailsIntent: ProductsDetailsIntent
 
     @Before
@@ -46,16 +46,10 @@ class ProductDetailsViewModelTest {
     }
 
     private fun `given a successful product procurement`() {
-        every { productsDetailsIntent.displayProductScreen() } returns Unit
-        every { productsDetailsIntent.loadProduct(any()) } returns Unit
-
         every { productsDetailsIntent.getProduct() } returns getFakeProduct()
     }
 
     private fun `given a failed product procurement`() {
-        every { productsDetailsIntent.displayEmptyElementScreen() } returns Unit
-        every { productsDetailsIntent.loadProduct(any()) } returns Unit
-
         every { productsDetailsIntent.getProduct() } returns emptyProduct
     }
 

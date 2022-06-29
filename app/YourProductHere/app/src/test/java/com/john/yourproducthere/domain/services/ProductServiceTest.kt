@@ -20,7 +20,7 @@ class ProductServiceTest {
 
     private lateinit var productService: ProductService
 
-    @MockK
+    @MockK(relaxed = true)
     private lateinit var productDaoRetroFitMock: ProductDaoRetroFit
 
     @Before

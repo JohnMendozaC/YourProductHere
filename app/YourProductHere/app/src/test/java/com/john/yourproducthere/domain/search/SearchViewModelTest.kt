@@ -17,10 +17,10 @@ class SearchViewModelTest {
 
     private lateinit var searchViewModel: SearchViewModel
 
-    @MockK
+    @MockK(relaxed = true)
     private lateinit var productService: ProductService
 
-    @MockK
+    @MockK(relaxed = true)
     private lateinit var searchIntent: SearchIntent
 
     @Before
@@ -67,23 +67,15 @@ class SearchViewModelTest {
     }
 
     private fun `given an answer that it does not have active internet`() {
-        `process actions search for products`()
-
         every { searchIntent.isActiveNetwork() } returns false
     }
 
     private fun `given an answer that it does have active internet`() {
-        `process actions search for products`()
-        coEvery { productService.searchProduct(any()) } returns any()
-
         every { searchIntent.isActiveNetwork() } returns true
     }
 
     private fun `given a successful response from the product search`() {
-        `process actions search for products`()
         every { searchIntent.isActiveNetwork() } returns true
-        every { searchIntent.launchShowSearchResults(any()) } returns Unit
-
         coEvery { productService.searchProduct(any()) } returns ProductsResolverResult.Success(
             getFakeProductInquiry()
         )
@@ -91,8 +83,6 @@ class SearchViewModelTest {
 
     private fun `given a failed response from the product search`() {
         every { searchIntent.isActiveNetwork() } returns true
-        `process actions search for products`()
-
         coEvery { productService.searchProduct(any()) } returns ProductsResolverResult.Error(
             anyError
         )
@@ -140,11 +130,6 @@ class SearchViewModelTest {
         withClue("the error code reported should be any error") {
             codeError.captured shouldBe anyError
         }
-    }
-
-    private fun `process actions search for products`() {
-        every { searchIntent.watchTheScreenLoading(any()) } returns Unit
-        every { searchIntent.showError(any()) } returns Unit
     }
 
     companion object {
